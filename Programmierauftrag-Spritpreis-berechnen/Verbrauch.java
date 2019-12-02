@@ -11,6 +11,11 @@ public class Verbrauch {
     this.spritPreis = spritPreis;
   }
 
+  // Constructor, no params
+  Verbrauch() {
+
+  }
+
   public double verbrauchPro100Km() {
     return 100 * (spritMenge / strecke);
   }
@@ -23,14 +28,13 @@ public class Verbrauch {
   public double streckeMit1Liter() {
     return 1 / (verbrauchPro100Km() / 100);
  }
- // TODO: Stieglbauer nach der beliebheitsskala fragen
-  public double spezifischeCO2Emission(String spritArt) {
-    if ("diesel".equalsIgnoreCase(spritArt)) {
-      return (spritMenge * 2.62) * (spritMenge * streckeMit1Liter()); 
-    } else if ("benzin".equalsIgnoreCase(spritArt)) {
-      return (spritMenge * 2.32) * (spritMenge * streckeMit1Liter()); 
-    } else {
-      throw new RuntimeException();
-    }
+ public double spezifischeCO2Emission(String spritArt) {
+   if (spritArt.equalsIgnoreCase("diesel")) {
+     return (spritMenge * 2.62) * (spritMenge * streckeMit1Liter()); 
+   } else if (spritArt.equalsIgnoreCase("benzin")) {
+     return (spritMenge * 2.32) * (spritMenge * streckeMit1Liter()); 
+   } else {
+     throw new RuntimeException();
+   }
   }
 }
