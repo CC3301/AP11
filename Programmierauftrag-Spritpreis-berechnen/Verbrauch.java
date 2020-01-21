@@ -30,11 +30,20 @@ public class Verbrauch {
  }
  public double spezifischeCO2Emission(String spritArt) {
    if (spritArt.equalsIgnoreCase("diesel")) {
-     return (spritMenge * 2.62) * (spritMenge * streckeMit1Liter()); 
+     return 2.62 * (this.spritMenge / this.strecke);
    } else if (spritArt.equalsIgnoreCase("benzin")) {
-     return (spritMenge * 2.32) * (spritMenge * streckeMit1Liter()); 
+     return 2.32 * (this.spritMenge / this.strecke);
    } else {
-     throw new RuntimeException();
+     return 0.0;
    }
   }
+ public double absoluteCO2Emission(String spritArt) {
+  if (spritArt.equalsIgnoreCase("diesel")) {
+    return (this.spezifischeCO2Emission(spritArt) * this.strecke) / 1000;
+  } else if (spritArt.equalsIgnoreCase("benzin")) {
+    return (this.spezifischeCO2Emission(spritArt) * this.strecke) / 1000;
+  } else {
+    return 0.0;
+  }
+ }
 }
