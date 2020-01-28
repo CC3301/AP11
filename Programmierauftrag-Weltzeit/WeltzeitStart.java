@@ -8,57 +8,57 @@ public class WeltzeitStart {
     Scanner  sc = new Scanner(System.in);
     Weltzeit wz = new Weltzeit();
 
-    // user eingabe, auswahl ob ortszeit oder muczeit
-    System.out.println("Ortszeit oder Muenchenzeit berechnen?(o/m)");
-    String auswahl = sc.nextLine();
+    // programm loop
+    do {
 
-    // ortszeit ausrechen
-    if (auswahl.equalsIgnoreCase("o")) {
+      // user eingabe, auswahl ob ortszeit oder muczeit
+      System.out.println("Ortszeit oder Muenchenzeit berechnen? (o/m)");
+      String auswahl = sc.nextLine();
 
-      System.out.print("Bitte Ort in Brasilien eingeben: ");
-      String ort  = sc.nextLine();
-  
-      System.out.print("Bitte brasilianische Uhrzeit des Spiels eingeben(hh:mm): ");
-      String zeit = sc.nextLine();
-  
-      // zeit berechnen
-      String mucZeit = wz.bestimmeMucZeit(ort, zeit);
-  
-      // ausgabe
-      System.out.println("Spielstaette in Brasilien:\n" + ort);
-      System.out.println("Uhrzeit in " + ort + " (hh:mm)\n" + zeit);
-      System.out.println("**************************************************");
-      System.out.println("Uhrzeit in Muenchen\n" + mucZeit);
+      // ortszeit ausrechen
+      if (auswahl.equalsIgnoreCase("o")) {
+
+        System.out.print("Bitte Ort in Brasilien eingeben: ");
+        String ort  = sc.nextLine();
     
-    // muenchen Zeit ausgeben
-    } else if (auswahl.equalsIgnoreCase("m")) {
+        System.out.print("Bitte brasilianische Uhrzeit des Spiels eingeben (hh:mm): ");
+        String zeit = sc.nextLine();
+    
+        // zeit berechnen
+        String mucZeit = wz.bestimmeMucZeit(ort, zeit);
+    
+        // ausgabe
+        System.out.println("Spielstaette in Brasilien:\n" + ort);
+        System.out.println("Uhrzeit in " + ort + " (hh:mm)\n" + zeit);
+        System.out.println("**************************************************");
+        System.out.println("Uhrzeit in Muenchen\n" + mucZeit);
+      
+      // muenchen Zeit ausgeben
+      } else if (auswahl.equalsIgnoreCase("m")) {
 
-      System.out.print("Bitte Ort in Brasilien eingeben: ");
-      String ort  = sc.nextLine();
-  
-      System.out.print("Bitte eine muenchener Uhrzeit eingeben(hh:mm): ");
-      String zeit = sc.nextLine();
-  
-      // zeit berechnen
-      String mucZeit = wz.bestimmeOrtsZeit(ort, zeit);
-  
-      // ausgabe
-      System.out.println("Ort in Brasilien:\n" + ort);
-      System.out.println("Uhrzeit in " + ort + " (hh:mm)\n" + zeit);
-      System.out.println("**************************************************");
-      System.out.println("Uhrzeit in Muenchen\n" + mucZeit);
+        System.out.print("Bitte Ort in Brasilien eingeben: ");
+        String ort  = sc.nextLine();
+    
+        System.out.print("Bitte eine muenchener Uhrzeit eingeben (hh:mm): ");
+        String zeit = sc.nextLine();
+    
+        // zeit berechnen
+        String mucZeit = wz.bestimmeOrtsZeit(ort, zeit);
+    
+        // ausgabe
+        System.out.println("Ort in Brasilien:\n" + ort);
+        System.out.println("Uhrzeit in " + ort + " (hh:mm)\n" + zeit);
+        System.out.println("**************************************************");
+        System.out.println("Uhrzeit in Muenchen\n" + mucZeit);
 
-    } else {
-      System.out.println("Unbekannte Option.");
-      main(null);
-    }
+      } else {
+        System.out.println("Unbekannte Option.");
+      }
 
+      // ausgabe fuer quit
+      System.out.println("Strg+C drucken um zu beenden");
 
-
-
-    // Scanner schliessen
-    sc.close();
+    } while (true);
 
   }
-
 }
