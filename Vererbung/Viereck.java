@@ -2,8 +2,8 @@ import java.lang.Math;
 
 public class Viereck {
 
-  static double breite;
-  static double laenge;
+  protected double breite;
+  protected double laenge;
 
   // Methods
   double flaecheBerechnen() {
