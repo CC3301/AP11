@@ -50,9 +50,9 @@ public class ViereckTest {
     System.out.println("\tLaenge    : " + laenge                                   + "cm" );
     System.out.println("\tBreite    : " + breite                                   + "cm" );
     System.out.println("\tFlaeche   : " + testParallelogramm.flaecheBerechnen()    + "cm2");
-    System.out.println("\tUmfang    : " + testParallelogramm.umfangBerechnen()     + "cm2");
-    System.out.println("\tDiagonaleE: " + testParallelogramm.diagonaleEBerechnen() + "cm2");
-    System.out.println("\tDiagonaleF: " + testParallelogramm.diagonaleFBerechnen() + "cm2");
+    System.out.println("\tUmfang    : " + testParallelogramm.umfangBerechnen()     + "cm" );
+    System.out.println("\tDiagonaleE: " + testParallelogramm.diagonaleEBerechnen() + "cm" );
+    System.out.println("\tDiagonaleF: " + testParallelogramm.diagonaleFBerechnen() + "cm" );
     System.out.println("[OK]");
 
   }
