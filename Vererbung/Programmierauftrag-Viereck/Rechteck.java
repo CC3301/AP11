@@ -8,7 +8,7 @@ public class Rechteck extends Viereck {
 
   // Methods
   double diagonaleBerechnen() {
-    return Math.sqrt(Viereck.laenge*Viereck.laenge + Viereck.breite*Viereck.breite);
+    return Math.round(Math.sqrt(Viereck.laenge*Viereck.laenge + Viereck.breite*Viereck.breite));
   }
 
 }

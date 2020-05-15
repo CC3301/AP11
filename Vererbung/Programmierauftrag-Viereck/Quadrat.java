@@ -7,7 +7,7 @@ public class Quadrat extends Viereck {
 
   // Methods
   double diagonaleBerechnen() {
-    return laenge * Math.sqrt(2);
+    return Math.round(laenge * Math.sqrt(2));
   }
 
 }

@@ -7,11 +7,11 @@ public class Viereck {
 
   // Methods
   double flaecheBerechnen() {
-    return breite * laenge;
+    return Math.round(breite * laenge);
   }
 
   double umfangBerechnen() {
-    return 2 * breite + 2 * laenge;
+    return Math.round(2 * breite + 2 * laenge);
   }
 
 
